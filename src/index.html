@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB CONFIDENCE</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--fuentes-->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
+    </style>
+    <!--LIBRERIA AOS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!--SWIPER-->
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="//unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .swiper-slide div {
+        padding: 0.5rem;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+      }
+
+      .swiper-slide-active div {
+        padding: 0.8rem;
+        color: white;
+        background-color: #152028;
+      }
+
+      @media screen and (min-width: 400px) {
+        .swiper-slide div {
+          padding: 0.5rem;
+        }
+      }
+
+      @media screen and (min-width: 400px) {
+        .swiper-slide-active div {
+          padding: 0.8rem;
+        }
+      }
+
+      @media screen and (min-width: 640px) {
+        .swiper-slide div {
+          padding: 1rem;
+        }
+      }
+
+      @media screen and (min-width: 640px) {
+        .swiper-slide-active div {
+          padding: 1.5rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .swiper-slide div {
+          padding: 1rem 0.8rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .swiper-slide-active div {
+          padding: 1.5rem 0.8rem;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .swiper-slide div {
+          padding: 1.5rem;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .swiper-slide-active div {
+          padding: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        .swiper-slide div {
+          padding: 1.5rem;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        .swiper-slide-active div {
+          padding: 3rem;
+          color: white;
+          background-color: #152028;
+        }
+      }
+
+      @media screen and (min-width: 1536px) {
+        .swiper-slide div {
+          padding: 4rem;
+        }
+      }
+
+      @media screen and (min-width: 1536px) {
+        .swiper-slide-active div {
+          padding: 6rem;
+          color: white;
+          background-color: #152028;
+        }
+      }
+
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after {
+        content: "" !important;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: "" !important;
+      }
+
+      .swiper-button-prev,
+      .swiper-rtl .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 50px);
+        left: auto;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+          right: var(--swiper-navigation-sides-offset, 50px);
+          left: auto;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+          right: var(--swiper-navigation-sides-offset, 90px);
+          left: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="relative overflow-hidden">
+      <!--MENU-->
+      <div
+        id="menu-mobile"
+        class="absolute top-0 z-50 right-0 translate-x-full h-screen bg-[#152028] w-full md:w-[24rem] md:pl-5 transition-all ease-in-out duration-700 pt-[1.9rem]"
+      >
+        <div
+          class="px-5 pt-[1.15rem] pb-[3rem] flex justify-between items-center"
+        >
+          <span id="menu-close">
+            <img src="assets/img/close.svg" alt="" class="w-7 cursor-pointer" />
+          </span>
+        </div>
+
+        <div>
+          <div class="px-5 py-10 flex flex-col h-full text-white">
+            <ul
+              class="flex flex-col gap-y-10 text-xl h-full text-white tracking-widest"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            >
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index.html"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                >
+                  Home</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="#sobre-nosotros"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                >
+                  About us</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="services.html"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Services</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="#casos-exitos"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Success cases</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="#clientes"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Clients</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="#contacto"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li class="flex justify-between w-full pt-10">
+                <span>
+                  <a href="index.html" class="text-[#25B4B1] font-extrabold">
+                    EN</a
+                  >
+                  <span> |</span> <a href="index-esp.html">ES</a></span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--VIDEO HERO + HEADER-->
+      <section
+        class="flex justify-center items-center flex-col bg-cover bg-center"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-full h-[35rem] md:h-screen object-cover brightness-75"
+        >
+          <source src="assets/videos/video2.mp4" type="video/mp4" class="" />
+        </video>
+        <!-- Header -->
+        <header class="w-full absolute top-10 container">
+          <div
+            class="flex justify-between"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <a class="" href="index.html">
+              <img src="assets/img/logo.jpg" alt="" class="w-8 md:w-11" />
+            </a>
+            <div class="flex justify-center items-center gap-x-4 text-white">
+              <span class="flex justify-center items-center gap-x-1"
+                ><a href="index.html" class="text-[#152028] font-extrabold">
+                  EN</a
+                >
+                <span> |</span> <a href="index-esp.html"> ES</a></span
+              ><img
+                src="assets/img/menu-hamburguesa.svg"
+                class="w-8 cursor-pointer"
+                id="menu-hambur"
+                alt=""
+              />
+            </div>
+          </div>
+        </header>
+
+        <!--Titular-->
+        <div
+          class="absolute text-white flex flex-col gap-y-5 text-center justify-center items-center"
+        >
+          <img src="assets/img/titular.svg" alt="" class="w-3/4 md:w-full" />
+        </div>
+        <!--Titular-->
+      </section>
+      <!--VIDEO HERO + HEADER-->
+
+      <!--INTRODUCCION-->
+      <section class="bg-[#152028] py-16 md:py-32 2xl:py-52">
+        <div
+          class="container mx-auto flex flex-col gap-y-8 md:flex-row justify-center items-start text-white"
+        >
+          <div
+            class="w-full md:w-1/2 h-full"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem]"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              Experience <br />Knowledge <br />Trust
+            </h1>
+          </div>
+          <div
+            class="w-full md:w-1/2 text-sm sm:text-base lg:text-lg flex justify-end"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <p>
+              With
+              <span
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                more than 20 years of experience in the hospitality
+                industry,</span
+              >
+              we have an in-depth knowledge of its dynamics, operators, and
+              suppliers. This differential paired with our team’s skills allows
+              us to identify the real estate value of an asset and manage it so
+              that it reaches its
+              <span
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+                >full potential</span
+              >
+              and obtains the
+              <span
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+                >highest returns.</span
+              >
+              <br />
+              <br />
+              We build
+              <span
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+                >rock-solid bonds of trust</span
+              >
+              with our clients. We align our clients' interests with those of
+              operators in the hotel industry. Our proprietary
+              <span
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+                >Management System</span
+              >
+              delivers real-time metrics and analytics, regular reports, and
+              personalized advice that empowers our clients to fully understand
+              their investment, track their progress, and make informed
+              decisions.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--INTRODUCCION-->
+
+      <!--SOBRE NOSOTROS-->
+      <section
+        id="sobre-nosotros"
+        class="bg-white py-14 md:py-10 lg:py-10 xl:pb-20 xl:pt-40 2xl:py-20 relative"
+      >
+        <img
+          src="assets/img/Flecha_.png"
+          alt=""
+          class="hidden md:block absolute z-50 md:w-[28rem] lg:w-[39rem] xl:w-auto top-0 -left-8 md:-left-12 lg:-left-16 xl:-left-8"
+        />
+        <img
+          src="assets/img/rectan.png"
+          alt=""
+          class="hidden md:block absolute top-0 md:w-[25rem] lg:w-[35rem] xl:w-auto"
+        />
+
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-center z-50 pb-5 md:pb-0"
+        >
+          <div
+            class="w-full md:w-1/2 z-50"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028] md:text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              About us
+            </h1>
+          </div>
+          <div class="w-1/2 text-xl flex flex-col gap-y-10"></div>
+        </div>
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-center"
+        >
+          <div class="w-1/2"></div>
+          <div
+            class="w-full md:w-1/2 flex flex-col gap-y-10 text-sm sm:text-base lg:text-lg z-50"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <div class="flex justify-end">
+              <p class="text-[#152028]">
+                <span
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Camilo Matarraz</span
+                >
+                heads our ecosystem of local specialists. Based in Miami since
+                moving there in 2001, Camilo's career in the hotel industry
+                began in Buenos Aires, Argentina.
+                <span
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Having worked in practically every position in the
+                  sector,</span
+                >
+                he has a deep understanding of the industry and what it takes to
+                succeed. He also expanded his expertise as a Real Estate
+                consultant. Today, he leverages all of his skills and experience
+                as an Asset Management provider, offering investors from around
+                the world unparalleled insight, passion, and dedication. <br />
+                <br />
+                At Confidence, we implement
+                <span
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >our own working and reporting methodology,</span
+                >
+                which we created based on more than two decades of experience.
+                From a menu of services, we develop
+                <span
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >tailor-made proposals</span
+                >
+                that include, for example, asset inspection, accounting and
+                financial management, metrics development, and assistance in
+                starting a business in the United States.
+              </p>
+            </div>
+            <div class="w-1/2">
+              <img
+                src="assets/img/camilo.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <a
+              href="https://www.linkedin.com/in/camilomatarraz"
+              target="_blank"
+            >
+              <img
+                src="assets/img/icon-linkedin.svg"
+                alt=""
+                class="w-5 sm:w-7 md:w-10"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <!--SOBRE NOSOTROS-->
+
+      <!--SERVICIOS-->
+      <section class="" id="#servicios">
+        <div
+          class="bg-center bg-no-repeat bg-cover pt-10 pb-32 md:pt-16 md:pb-44 lg:pt-28 lg:pb-72"
+          style="background: url(assets/img/bg-servicios.png)"
+        >
+          <div
+            class="container mx-auto flex justify-start items-start"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              Services
+            </h1>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#152028] pt-[25.5rem] pb-10 sm:pb-80 md:pb-52 md:pt-[3rem] lg:pt-[6rem] xl:py-52 relative flex justify-center"
+        >
+          <div
+            class="absolute mx-auto grid grid-cols-2 md:grid-cols-4 text-white -top-20 md:-top-36 gap-10 w-10/12 2xl:w-9/12"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <!--1-->
+            <a
+              href="services.html#servicio1"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Asset <br />
+                  inspection
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/lupa.svg"
+                  alt=""
+                  class="w-7 sm:w-auto md:w-7 lg:w-auto"
+                />
+              </div>
+            </a>
+            <!--2-->
+            <a
+              href="services.html#servicio2"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  KPI <br />
+                  analysis
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img src="assets/img/kpis.svg" alt="" class="w-7 sm:w-auto" />
+              </div>
+            </a>
+            <!--3-->
+            <a
+              href="services.html#servicio3"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Bank <br />
+                  management
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/bancaria.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--4-->
+            <a
+              href="services.html#servicio4"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Accounting <br />
+                  and finance
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/finanzas.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--5-->
+            <a
+              href="services.html#servicio5"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Fiduciary <br />
+                  management
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/gestion.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--6-->
+            <a
+              href="services.html#servicio6"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Safekeeping of <br />
+                  documentation
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/bandera.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--7-->
+            <a
+              href="services.html#servicio7"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Staff <br />
+                  training
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/capacitacion.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--8-->
+            <a
+              href="services.html#servicio8"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Quality <br />
+                  control
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/calidad.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#152028] pb-20 pt-0 sm:pt-28 md:pt-0">
+          <div
+            class="container mx-auto flex justify-center items-center text-white"
+          >
+            <a
+              href="services.html"
+              class="flex bg-[#2064ae] items-center justify-center gap-x-5 px-5 py-2 text-sm sm:text-xl uppercase hover:bg-blue-500 transition ease-in-out duration-500"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            >
+              <img src="assets/img/arrow.png" alt="" class="w-4 h-4" />
+              <span>View more</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--SERVICIOS-->
+
+      <!--CASOS DE EXITO-->
+      <section id="casos-exitos" class="bg-[#25B4B1] py-10 lg:py-32">
+        <div
+          class="container mx-auto flex flex-col gap-y-10 md:gap-y-24 relative"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h1
+            class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028]"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+          >
+            Success cases
+          </h1>
+          <div class="swiper-container">
+            <div class="swiper-wrapper flex items-center">
+              <div class="swiper-slide">
+                <div
+                  class="w-full mx-auto bg-[#2E3D47] text-[#25B4B1] flex flex-col gap-y-2 md:gap-y-5"
+                >
+                  <h1
+                    class="text-sm sm:text-base lg:text-2xl"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 500;
+                    "
+                  >
+                    We’ve assisted in the refinancing of loans of up to US$ 35
+                    million
+                  </h1>
+                  <p
+                    class="text-xs sm:text-xs md:text-sm xl:text-lg"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    We initiate and oversee negotiations with
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >banks</span
+                    >, seeking the
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >best conditions</span
+                    >
+                    for our clients in terms of interest rates, loan periods,
+                    and guarantees. During the due diligence processes, we
+                    handle every information and financial analysis requirement.
+                    <br />
+                    <br />Once the refinancing is accepted, we facilitate
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >communication</span
+                    >
+                    between all parties involved and manage the transaction step
+                    by step until closing.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="w-full mx-auto text-[#25B4B1] bg-[#2E3D47] md:p-[4.7rem] flex flex-col gap-y-5"
+                >
+                  <h1
+                    class="text-sm sm:text-base lg:text-2xl"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 500;
+                    "
+                  >
+                    We’ve created a unique management model in the market
+                  </h1>
+                  <p
+                    class="text-xs sm:text-xs md:text-sm xl:text-lg"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    Our
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >Management System</span
+                    >
+                    is based on a comprehensive assessment of the asset's
+                    financial position and performance. Each month, we send our
+                    clients
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >reports</span
+                    >
+                    in which we analyze and project critical variables of their
+                    assets—occupancy, average room rate, and bookings, among
+                    others—and compare them with those of the competition and
+                    the market. <br />
+                    <br />
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Having this overview is essential for owners.</span
+                    >
+                    It allows them to fully understand the functioning of their
+                    asset and the market, and to anticipate and make decisions
+                    that have an impact on the direction of their business.
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="w-full mx-auto bg-[#2E3D47] text-[#25B4B1] md:p-[4.7rem] flex flex-col gap-y-5"
+                >
+                  <h1
+                    class="text-sm sm:text-base lg:text-2xl"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 500;
+                    "
+                  >
+                    We supervised the complete renovation of a hotel
+                  </h1>
+                  <p
+                    class="text-xs sm:text-xs md:text-sm xl:text-lg"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    We were a key player in an
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >expansion project in Miami Beach</span
+                    >
+                    during the most complex period of the COVID-19 pandemic. At
+                    the request of our client, we carried out an in-depth
+                    analysis of the budgets for the construction of
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >69 rooms</span
+                    >
+                    and the exhaustive monitoring of the construction for
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >two years.</span
+                    >
+                    <br />
+                    <br />
+                    Our work in controlling the numbers and supervising the
+                    works resulted in
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >significant savings</span
+                    >
+                    for the investors, in addition to the completion of the
+                    renovation project within the programmed timeframe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next top-4 lg:top-20">
+            <img
+              src="assets/img/arrow2.svg"
+              alt=""
+              class="rotate-90 w-7 lg:w-10 xl:w-auto"
+            />
+          </div>
+          <div class="swiper-button-prev top-4 lg:top-20">
+            <img
+              src="assets/img/arrow2.svg"
+              alt=""
+              class="-rotate-90 w-7 lg:w-10 xl:w-auto"
+            />
+          </div>
+        </div>
+      </section>
+      <!--CASOS DE EXITO-->
+
+      <!--CLIENTES-->
+      <section class="py-10 md:py-20 lg:py-32" id="clientes">
+        <div
+          class="container mx-auto flex flex-col gap-y-10 md:gap-y-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h1
+            class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028]"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+          >
+            Clients
+          </h1>
+          <!--grillas-->
+          <div class="flex flex-col gap-y-16 md:gap-y-20">
+            <!--grilla partners 1-->
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-y-16"
+            >
+              <a
+                href="http://thefritzhotel.com"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/fritz.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+              <a
+                href="https://www.casamiamihotel.com"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/casa.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+              <a
+                href="https://www.umahousesouthbeach.com"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/uma.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+              <a
+                href="https://lowkl.com/greenview/"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/green.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+            </div>
+            <!--grilla partners 1-->
+            <!--grilla partners 2-->
+            <div class="grid grid-cols-2 gap-y-16 md:grid-cols-3">
+              <a
+                href="https://www.cresthotel.com"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/crest.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+              <a
+                href="https://www.aquamiami.com"
+                target="_blank"
+                class="flex justify-center items-end hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/aqua.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                class="flex justify-center items-end hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/redbury.svg"
+                  alt=""
+                  class="w-2/4 sm:w-2/5 md:w-2/4 xl:w-auto"
+                />
+              </a>
+            </div>
+            <!--grilla partners 2-->
+          </div>
+          <!--grillas-->
+        </div>
+      </section>
+      <!--CLIENTES-->
+
+      <!--AFILIADOS-->
+      <section class="py-10 sm:py-16 lg:py-28 bg-[#CA181A]" id="clientes">
+        <div
+          class="container mx-auto flex flex-col gap-y-10 md:gap-y-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h1
+            class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+          >
+            Affiliates
+          </h1>
+          <!--grillas-->
+          <div class="flex flex-col">
+            <!--grilla partners 1-->
+            <div class="grid grid-cols-2 justify-center items-center">
+              <a
+                href="https://thinkhospitality.com/"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/logo-thinkhospitality.png"
+                  alt=""
+                  class="w-2/4"
+                />
+              </a>
+              <a
+                href="http://smartroomscompany.com/"
+                target="_blank"
+                class="flex justify-center items-center hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+              >
+                <img
+                  src="assets/img/logo-smartrooms.png"
+                  alt=""
+                  class="w-2/4"
+                />
+              </a>
+            </div>
+            <!--grilla partners 1-->
+          </div>
+          <!--grillas-->
+        </div>
+      </section>
+      <!--AFILIADOS-->
+
+      <!--CONTACTO-->
+      <section
+        class="bg-[#2E3D47] py-12 md:py-20 lg:py-32 relative"
+        id="contacto"
+      >
+        <div
+          class="container mx-auto flex flex-col gap-y-4 md:gap-y-10"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h1
+            class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+          >
+            Contact
+          </h1>
+          <div class="flex flex-col gap-y-5">
+            <p
+              class="text-sm sm:text-base lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              Please send us your name and phone number,
+              <br class="hidden sm:block" />
+              and briefly let us know the reason for reaching out,
+              <br class="hidden sm:block" />
+              so we can get in touch with you promptly.
+            </p>
+
+            <a
+              href=""
+              class="text-white text-lg sm:text-xl lg:text-2xl hover:underline"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+              >info@confidencemgt.com</a
+            >
+          </div>
+          <p
+            class="text-[#CA181A] text-base sm:text-[1.4rem]"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+          >
+            Thank you very much!
+          </p>
+        </div>
+        <img
+          src="assets/img/arrow-contacto.svg"
+          alt=""
+          class="hidden md:block absolute z-10 top-0 md:-right-3 xl:right-0 lg:h-[38rem] xl:h-[105%]"
+        />
+        <div
+          class="absolute right-0 -bottom-0 lg:bottom-[-0.105rem] xl:bottom-[-0.14rem] h-1/3 sm:h-2/3 md:h-full xl:h-[37.3rem]"
+        >
+          <div class="h-full w-full relative">
+            <div
+              class="py-2 w-full bg-[#CA181A] absolute bottom-0 lg:bottom-0.5 hidden md:block"
+            ></div>
+            <img
+              src="assets/img/triangulo-contacto.svg"
+              alt=""
+              class="h-full w-full hidden md:block"
+            />
+          </div>
+        </div>
+      </section>
+      <!--CONTACTO-->
+
+      <footer class="bg-[#152028]">
+        <div
+          class="container flex flex-col gap-y-5 md:gap-y-14 py-14 lg:py-24 mx-auto"
+        >
+          <div class="">
+            <img
+              src="assets/img/logo-footer.png"
+              alt=""
+              class="w-[12rem] sm:w-[15rem] lg:w-[24rem]"
+            />
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-y-5 py-5 md:py-10 z-50"
+          >
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Confidence
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li class="hover:underline">
+                    <a href="#sobre-nosotros">About us</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Services</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="#casos-exitos">Success cases</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="#clientes">Clients</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="#contacto">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Services
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li class="hover:underline">
+                    <a href="services.html">Asset inspection</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">KPI analysis</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Bank management</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Accounting and finance</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Fiduciary management</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">
+                      Safekeeping of <br />
+                      documentation</a
+                    >
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Staff training</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="services.html">Quality control</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Contact
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li>
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >Email:</span
+                    >
+                    info@confidencemgt.com
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Office:</span
+                    >
+                    156 Almeria Ave #201, Coral <br />
+                    Gables, FL 33134
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/camilomatarraz"
+                      target="_blank"
+                    >
+                      <img
+                        src="assets/img/icon-linkedin-white.svg"
+                        alt=""
+                        class="w-5 sm:w-6 pt-2 md:pt-0"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-t-1 border-t-gray-400" />
+        <!--cierre footer-->
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between text-gray-400 py-3 tracking-[0.2em] uppercase text-[0.6rem] sm:text-xs md:text-xs gap-y-1 md:gap-y-0"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 400"
+          >
+            <span class="text-center md:text-left"
+              >© 2023 confidence. All rights reserved.</span
+            >
+            <span
+              >MADE WITH <span class="text-red-500"> &#9829;</span> BY DIGITAL
+              FELLOW</span
+            >
+          </div>
+        </div>
+        <!--cierre footer-->
+      </footer>
+    </main>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        initialSlide: 1,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          400: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1.5,
+            spaceBetween: 100, // Mostrar 3 imágenes a la vez a partir de 768px
+          },
+        },
+      });
+    </script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

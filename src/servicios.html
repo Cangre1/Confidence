@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB CONFIDENCE</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--fuentes-->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
+    </style>
+    <!--LIBRERIA AOS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!--SWIPER-->
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="//unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .swiper-pagination-bullet {
+        background: var(--swiper-pagination-bullet-inactive-color, #fff);
+      }
+      @media (min-width: 768px) {
+        .swiper-slide {
+          background-color: #152028;
+          padding: 0.6rem 0rem 1.5rem 0.2rem;
+          color: white;
+          transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+            filter, backdrop-filter;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 500ms;
+          font-size: 0.5rem;
+          line-height: 0.5rem;
+        }
+
+        .swiper-slide:hover {
+          background-color: #2064ae;
+        }
+
+        .swiper-slide-active {
+          background-color: #2064ae;
+          padding: 1rem 0rem 2rem 0.2rem;
+          color: white;
+          transition-property: color, background-color, border-color,
+            text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+            filter, backdrop-filter;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 500ms;
+          font-size: 0.65rem;
+          line-height: 0.9rem;
+        }
+
+        .swiper-slide-active:hover {
+          background-color: #3e82ca;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .swiper-slide {
+          padding: 0.6rem 1rem 3rem 1rem;
+          font-size: 0.65rem;
+          line-height: 0.9rem;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .swiper-slide-active {
+          padding: 1rem 1rem 4rem 1rem;
+          font-size: 0.75rem;
+          line-height: 1rem;
+        }
+      }
+
+      @media (min-width: 1536px) {
+        .swiper-slide-active {
+          padding: 1rem 1rem 4rem 1rem;
+          font-size: 0.85rem;
+          line-height: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="relative overflow-hidden text-lg">
+      <!--MENU-->
+      <div
+        id="menu-mobile"
+        class="absolute top-0 z-50 right-0 translate-x-full h-screen bg-[#152028] w-full md:w-[24rem] md:pl-5 transition-all ease-in-out duration-700 pt-[1.9rem]"
+      >
+        <div
+          class="px-5 pt-[1.15rem] pb-[3rem] flex justify-between items-center"
+        >
+          <span id="menu-close">
+            <img src="assets/img/close.svg" alt="" class="w-7 cursor-pointer" />
+          </span>
+        </div>
+
+        <div>
+          <div class="px-5 py-10 flex flex-col h-full text-white">
+            <ul
+              class="flex flex-col gap-y-10 text-xl h-full text-white tracking-widest"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            >
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index-esp.html"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                >
+                  Home</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index-esp.html#sobre-nosotros"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                >
+                  Sobre nosotros</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="servicios.html"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Servicios</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index-esp.html#casos-exitos"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Casos de éxito</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index-esp.html#clientes"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Clientes</a
+                >
+              </li>
+              <li class="flex items-center gap-x-5">
+                <img src="assets/img/vineta-menu.svg" alt="" />
+                <a
+                  href="index-esp.html#contacto"
+                  class="border-b border-b-transparent hover:border-b-white transition-all ease-in-out duration-300"
+                  >Contacto</a
+                >
+              </li>
+              <li class="flex justify-between w-full pt-10">
+                <span>
+                  <a href="services.html"> EN</a> <span> |</span>
+                  <a href="servicios.html" class="text-[#25B4B1] font-extrabold"
+                    >ES</a
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- HEADER -->
+      <header class="w-full py-5 text-base">
+        <div
+          class="container mx-auto"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="pt-3 flex justify-between items-center w-full">
+            <a href="index-esp.html" class="w-1/3 flex justify-start">
+              <img src="assets/img/logo-service.png" alt="" class="w-52" />
+            </a>
+            <div class="w-1/3 flex justify-end cursor-pointer">
+              <img
+                id="menu-hambur"
+                src="assets/img/menu-hamburguesa-service-01.svg"
+                alt=""
+                class="w-8"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER -->
+
+      <!--CAROUSEL-->
+      <section class="hidden md:block">
+        <div
+          class="container mx-auto relative pt-12 md:pt-24 pb-16"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <img
+            src="assets/img/arrow2.svg"
+            class="absolute -left-1 top-40 rotate-90 md:rotate-0 md:top-[16.6rem] md:left-7 lg:top-[17.5rem] lg:left-12 xl:top-[21.2rem] xl:left-20 w-10 md:w-14"
+            alt=""
+          />
+          <div>
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028] pb-10"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              Servicios
+            </h1>
+          </div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div
+              class="swiper-wrapper flex items-center"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              <!--1-->
+              <div class="swiper-slide" data-id="slide1">
+                <a href="" class="">
+                  <div class="">
+                    <h1>
+                      INSPECCIÓN <br />
+                      DEL ACTIVO
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--2-->
+              <div class="swiper-slide" data-id="slide2">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      ANALISIS DE <br />
+                      MÉTRICAS KPIS
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--3-->
+              <div class="swiper-slide" data-id="slide3">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CONTABILIDAD <br />
+                      Y FINANZAS
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--4-->
+              <div class="swiper-slide" data-id="slide4">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      GESTIÓN <br />
+                      BANCARIA
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--5-->
+              <div class="swiper-slide" data-id="slide5">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      GESTIÓN <br />
+                      FIDUCIARIA
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--6-->
+              <div class="swiper-slide" data-id="slide6">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      RESGUARDO DE <br class="hidden lg:block" />
+                      LA DOC
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--7-->
+              <div class="swiper-slide" data-id="slide7">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CAPACITACIÓN <br />
+                      DEL PERSONAL
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--8-->
+              <div class="swiper-slide" data-id="slide8">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CONTROL DE <br />
+                      CALIDAD
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--1-->
+              <div class="swiper-slide" data-id="slide1">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      INSPECCION <br />
+                      DEL ACTIVO
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--2-->
+              <div class="swiper-slide" data-id="slide2">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      ANALISIS DE <br />
+                      MÉTRICAS KPIS
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--3-->
+              <div class="swiper-slide" data-id="slide3">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CONTABILIDAD <br />
+                      Y FINANZAS
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--4-->
+              <div class="swiper-slide" data-id="slide4">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      GESTIÓN <br />
+                      BANCARIA
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--5-->
+              <div class="swiper-slide" data-id="slide5">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      GESTIÓN <br />
+                      FIDUCIARIA
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--6-->
+              <div class="swiper-slide" data-id="slide6">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      RESGUARDO DE LA <br />
+                      DOCUMENTACIÓN
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--7-->
+              <div class="swiper-slide" data-id="slide7">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CAPACITACIÓN <br />
+                      DEL PERSONAL
+                    </h1>
+                  </div>
+                </a>
+              </div>
+
+              <!--8-->
+              <div class="swiper-slide" data-id="slide8">
+                <a href="">
+                  <div class="">
+                    <h1>
+                      CONTROL DE <br />
+                      CALIDAD
+                    </h1>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--CAROUSEL-->
+
+      <!--DETALLE-->
+      <!--1-->
+      <section
+        id="asset-inspection"
+        class="bg-[#152028] py-16 md:py-16 section-detalle hidden md:block"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/suite.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/suite.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Inspección <br />
+                del activo
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#2064ae] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >UP TO DATE</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Inspeccionamos mensualmente la propiedad. Utilizando la
+                  plataforma Fastfield, presentamos fotos, videos y comentarios
+                  del activo.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Realizamos una inspección semanal de la propiedad. Feedback
+                  con managers y equipo en general.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Verificamos que las licencias del activo estén vigentes y
+                  pagas.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Chequeamos que no se incurra en violaciones del “Code
+                  Compliance”.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Aprobamos presupuestos dentro de las guías acordadas con los
+                  propietarios.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--2-->
+      <section
+        id="kpi"
+        class="hidden bg-[#2064AE] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/kpi.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/kpi.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Análisis de <br />
+                métricas KPIs
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#152028] text-sm sm:text-[0.9rem] px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >REPORTE DE BENCHMARKING</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Seguimiento y análisis mensual de métricas ADR (precio
+                  promedio de la habitación), OCC (occupancy), REVPAR (ingresos
+                  por habitación disponible), ROOM NIGHTS, y REVENUE.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Performance mensual y acumulada versus budget y versus año
+                  anterior.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Seguimiento bisemanal cuantitativo y cualitativo de redes
+                  sociales y de Online Travel Agencies (OTA).
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  STR Análisis. Herramienta de evaluación comparativa que
+                  contrasta el rendimiento de un hotel con otros similares.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  STR Benchmarking de la industria con datos de oferta, demanda,
+                  cuotas e información del mercado, e indicadores de
+                  competitividad, entre otros. También incluye las principales
+                  métricas del activo solicitante.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--3-->
+      <section
+        id="bank-management"
+        class="hidden bg-[#152028] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/finanzas.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/finanzas.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Contabilidad <br />
+                y finanzas
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#2064ae] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Estados financieros</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Mantenemos un contacto permanente con el CPA.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Asistimos al operador en la elaboración de P&L, balances y
+                  cash flow.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Asistimos en la revisión de los estados financieros.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Revisamos el pago oportuno de los compromisos financieros,
+                  particularmente las cuotas de préstamos bancarios e impuestos.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Revisamos la correcta presentación de las declaraciones
+                  fiscales, particularmente el K1.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Asistimos en la coordinación de capital calls.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Coordinamos una auditoría al operador, a requerimiento de los
+                  propietarios.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--4-->
+      <section
+        id="accounting"
+        class="hidden bg-[#2064AE] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/gestion-bancaria.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/gestion-bancaria.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Gestión <br />
+                bancaria
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#152028] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Cuentas restringidas</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Gestionamos el manejo, movimiento y análisis de las cuentas
+                  restringidas.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Supervisamos las cuentas operativas.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Supervisamos los resúmenes bancarios.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Ejecutamos la transferencia de fondos mensuales a operadores
+                  según Budget y según acuerdos con propietarios.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Mantenemos una comunicación permanente con los bancos.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Colaboramos en la refinanciación de préstamos existentes.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--5-->
+      <section
+        id="difuciary"
+        class="hidden bg-[#152028] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/gestion-fiduciaria.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/gestion-fiduciaria.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Gestión <br />
+                fiduciaria
+              </h1>
+              <div>
+                <a
+                  href=""
+                  class="bg-[#2064ae] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >US person</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Representamos y defendemos las inversiones de los
+                  propietarios.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Representamos en los reclamos judiciales, bancarios y seguros.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Custodiamos los fondos en las cuentas restringidas (US
+                  person).
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Mantenemos una comunicación permanente con los agentes de
+                  seguros.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Verificamos el pago oportuno de seguros comerciales de los
+                  activos.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Buscamos eficiencias en la renovación semestral del seguro
+                  comercial de los activos.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Mantenemos la titularidad de la licencia de venta de alcohol
+                  (US person).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--6-->
+      <section
+        id="safekeeping"
+        class="hidden bg-[#2064AE] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/resguardo-doc.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/resguardo-doc.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Resguardo <br />
+                de la documentación
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#152028] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Documentación fiduciaria</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Presentaciones fiscales anuales y K1 de los socios.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Presentaciones fiscales anuales y K1 de los socios.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Presentaciones financieras.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Resúmenes bancarios y documentación de préstamos.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Documentación de reclamos legales.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Correo general.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--7-->
+      <section
+        id="staff"
+        class="hidden bg-[#152028] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/capacitacion.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/capacitacion.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Capacitación <br />
+                del personal
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#2064ae] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Experiencia del cliente</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Presencia: Aspecto físico, modales, expresión, gestualidad,
+                  empatía, sonrisa, conexión visual.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Motivación.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Detección de las necesidades del cliente.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Cumplimiento de estándares.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Upselling y cross selling.</li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Manejo de quejas, resolución de problemas.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Experiencia satisfactoria y memorable del cliente.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--8-->
+      <section
+        id="quality"
+        class="hidden bg-[#2064AE] py-16 md:py-16 section-detalle"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-10 md:gap-x-20"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="w-full h-[30rem] block md:hidden">
+            <img
+              src="assets/img/calidad.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="w-1/2 hidden md:block h-full pt-3">
+            <img src="assets/img/calidad.png" alt="" />
+          </div>
+          <div
+            class="w-full md:w-1/2 text-xl flex flex-col gap-y-10 md:gap-y-10"
+          >
+            <div class="flex flex-col gap-y-5">
+              <h1
+                class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Control <br />
+                de calidad
+              </h1>
+
+              <div>
+                <a
+                  href=""
+                  class="bg-[#152028] text-xs lg:text-sm px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                  "
+                  >Mystery guest</a
+                >
+              </div>
+            </div>
+            <div
+              class="text-sm lg:text-lg text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+            >
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Metodología de mistery guest con pautas precisas y puntos de
+                  supervisión.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Control de todo el ciclo de una estadía, desde la reserva por
+                  los diferentes canales hasta el check out.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Upselling, cross selling y manejo de quejas.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">
+                  Evaluación escrita, con grabaciones e imágenes.
+                </li>
+              </ul>
+              <ul class="pl-5 md:pl-0">
+                <li class="list-disc">Devolución al equipo gerencial.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--DETALLE-->
+
+      <!--CAROUSEL DETALLE MOB-->
+      <div class="swiper-container md:hidden bg-[#152028] relative pb-10">
+        <div class="swiper-wrapper bg-[#152028] flex">
+          <!--1-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Inspección del activo
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >UP TO DATE</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our continuous inspection service ensures your asset is
+                        well-maintained, up-to-date and fully compliant with
+                        industry standards at all times.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Inspeccionamos mensualmente la propiedad. Utilizando la
+                        plataforma Fastfield, presentamos fotos, videos y
+                        comentarios del activo.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Realizamos una inspección semanal de la propiedad.
+                        Feedback con managers y equipo en general.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Verificamos que las licencias del activo estén vigentes
+                        y pagas.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Chequeamos que no se incurra en violaciones del “Code
+                        Compliance”.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Aprobamos presupuestos dentro de las guías acordadas con
+                        los propietarios.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/suite.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--2-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Análisis de métricas KPIs
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Reporte de benchmarking</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our KPI Analysis—Benchmarking Report provides a
+                        comprehensive evaluation of your business so you can
+                        measure your performance against the competition.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Seguimiento y análisis mensual de métricas ADR (precio
+                        promedio de la habitación), OCC (occupancy), REVPAR
+                        (ingresos por habitación disponible), ROOM NIGHTS, y
+                        REVENUE.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Performance mensual y acumulada.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Versus budget y versus año anterior.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Seguimiento bisemanal cuantitativo y cualitativo de
+                        redes sociales y de Online Travel Agencies (OTA).
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        STR Análisis. Herramienta de evaluación comparativa que
+                        contrasta el rendimiento de un hotel con otros
+                        similares.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        STR Benchmarking de la industria con datos de oferta,
+                        demanda, cuotas e información del mercado, e indicadores
+                        de competitividad, entre otros. También incluye las
+                        principales métricas del activo solicitante.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/kpi.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--3-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Contabilidad y finanzas
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Estados financieros</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our Accounting and Finance service provides
+                        comprehensive financial management support.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Mantenemos un contacto permanente con el CPA.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Asistimos al operador en la elaboración de P&L, balances
+                        y cash flow.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Asistimos en la revisión de los estados financieros.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Revisamos el pago oportuno de los compromisos
+                        financieros, particularmente las cuotas de préstamos
+                        bancarios e impuestos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Revisamos la correcta presentación de las declaraciones
+                        fiscales, particularmente el K1.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Asistimos en la coordinación de capital calls.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Coordinamos una auditoría al operador, a requerimiento
+                        de los propietarios.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/finanzas.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--4-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Gestión bancaria
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Cuentas restringidas</a
+                      >
+                      <p
+                        class="pt-3 text-xs"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Gestionamos el manejo, movimiento y análisis de las
+                        cuentas restringidas.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Supervisamos las cuentas operativas.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Supervisamos los resúmenes bancarios.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Review of bank statements.</li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Ejecutamos la transferencia de fondos mensuales a
+                        operadores según Budget y según acuerdos con
+                        propietarios.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Mantenemos una comunicación permanente con los bancos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Colaboramos en la refinanciación de préstamos
+                        existentes.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/gestion-bancaria.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--5-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Gestión fiduciaria
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Us person</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our Fiduciary Management service safeguards and defends
+                        asset owners’ financial interests and ensures compliance
+                        with all legal and regulatory requirements.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Representamos y defendemos las inversiones de los
+                        propietarios.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Representamos en los reclamos judiciales, bancarios y
+                        seguros.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Custodiamos los fondos en las cuentas restringidas (US
+                        person).
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Mantenemos una comunicación permanente con los agentes
+                        de seguros.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Verificamos el pago oportuno de seguros comerciales de
+                        los activos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Buscamos eficiencias en la renovación semestral del
+                        seguro comercial de los activos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Mantenemos la titularidad de la licencia de venta de
+                        alcohol (US person).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/gestion-fiduciaria.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--6-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Resguardo de la documentación
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Documentación fiduciaria</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        We manage your fiduciary documentation, ensuring that it
+                        is securely stored.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Presentaciones fiscales anuales y K1 de los socios.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Resúmenes de aseguradoras y reclamos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Presentaciones financieras.</li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Resúmenes bancarios y documentación de préstamos.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Documentación de reclamos legales.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Correo general.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/resguardo-doc.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--7-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Capacitación del personal
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Experiencia del cliente</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our Staff Training service focuses on creating the best
+                        possible customer experience for guests through
+                        comprehensive training programs that develop employees'
+                        skills and abilities.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Presencia: Aspecto físico, modales, expresión,
+                        gestualidad, empatía, sonrisa, conexión visual.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Motivación.</li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Detección de las necesidades del cliente.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Cumplimiento de estándares.</li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Upselling y cross selling.</li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Manejo de quejas, resolución de problemas.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/capacitacion.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <!--8-->
+          <div class="swiper-slide">
+            <section class="bg-[#152028] py-5 md:py-16">
+              <div
+                class="container mx-auto flex flex-col md:flex-row justify-center items-start text-white gap-y-5"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                <div class="w-full md:w-1/2 text-xl flex flex-col gap-y-4">
+                  <div class="flex flex-col gap-y-2">
+                    <h1
+                      class="text-lg leading-5 text-white"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Control de calidad
+                    </h1>
+
+                    <div>
+                      <a
+                        href=""
+                        class="bg-[#2064ae] text-xs px-2 py-1 sm:px-4 sm:py-2 hover:bg-blue-500 transition ease-in-out duration-300 uppercase"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        >Mystery guest</a
+                      >
+                      <p
+                        class="pt-3 text-xs hidden"
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                      >
+                        Our Quality Control service assesses and improves the
+                        quality and performance of hotels using the mystery
+                        guest methodology.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs text-white"
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                  >
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Metodología de mistery guest con pautas precisas y
+                        puntos de supervisión.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Control de todo el ciclo de una estadía, desde la
+                        reserva por los diferentes canales hasta el check out.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Upselling, cross selling y manejo de quejas.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">
+                        Evaluación escrita, con grabaciones e imágenes.
+                      </li>
+                    </ul>
+                    <ul class="pl-5 md:pl-0">
+                      <li class="list-disc">Devolución al equipo gerencial.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="h-[15rem] aspect-square block md:hidden w-full">
+                  <img
+                    src="assets/img/calidad.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!--CAROUSEL DETALLE MOB-->
+
+      <!--CONTACTO-->
+      <section class="bg-white py-12 md:py-32 relative">
+        <div
+          class="container mx-auto flex flex-row md:justify-end"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <div class="flex flex-col gap-y-10">
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028]"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            >
+              Contacto
+            </h1>
+            <div class="flex flex-col gap-y-5">
+              <p
+                class="text-sm sm:text-base lg:text-lg text-[#152028]"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 300"
+              >
+                Envíenos su nombre, número de contacto telefónico y
+                <br class="hidden sm:block" />
+                el motivo por el cual le gustaría que conversáramos y
+                <br class="hidden sm:block" />
+                nos pondremos en contacto con usted.
+              </p>
+              <a
+                href=""
+                class="text-[#152028] text-lg sm:text-xl lg:text-2xl hover:underline"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+                >info@confidencemgt.com</a
+              >
+            </div>
+            <p
+              class="text-[#CA181A] text-base sm:text-[1.4rem]"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              ¡Muchas gracias!
+            </p>
+          </div>
+        </div>
+        <img
+          src="assets/img/arrow-contacto.svg"
+          alt=""
+          class="hidden md:block absolute z-10 md:top-0 md:left-[-1.3rem] lg:left-[-4.3rem] xl:left-[-1.7rem] h-[32rem] lg:h-[38rem] xl:h-[105%]"
+        />
+        <div
+          class="absolute -right-0 bottom-[-0.05rem] md:-left-1 md:-top-0.5 xl:top-[-0.150rem] h-1/3 sm:h-2/3 md:h-full xl:h-[37.3rem]"
+        >
+          <div class="h-full w-full relative">
+            <img
+              src="assets/img/triangulo-contacto.svg"
+              alt=""
+              class="h-full rotate-[180.3deg] hidden md:block"
+            />
+          </div>
+        </div>
+      </section>
+      <!--CONTACTO-->
+
+      <footer class="bg-[#152028]">
+        <div
+          class="container flex flex-col gap-y-5 md:gap-y-14 py-14 lg:py-24 mx-auto"
+        >
+          <div class="">
+            <img
+              src="assets/img/logo-footer.png"
+              alt=""
+              class="w-[12rem] sm:w-[15rem] lg:w-[24rem]"
+            />
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-y-5 py-5 md:py-10 z-50"
+          >
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Confidence
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li>Sobre nosotros</li>
+                  <li>Servicios</li>
+                  <li>Casos de éxito</li>
+                  <li>Clientes</li>
+                  <li>Contacto</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Servicios
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li>Inspección del activo</li>
+                  <li>Análisis de métricas KPIs</li>
+                  <li>Contabilidad y finanzas</li>
+                  <li>Gestión bancaria</li>
+                  <li>Gestión fiduciaria</li>
+                  <li>
+                    Resguardo de la <br />
+                    documentación
+                  </li>
+                  <li>Capacitación del personal</li>
+                  <li>Control de calidad</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-y-1 md:gap-y-5">
+              <h1
+                class="text-[#CA181A] text-xl sm:text-2xl lg:text-5xl"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                Contacto
+              </h1>
+              <div>
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li>
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      >Email:</span
+                    >
+                    info@confidencemgt.com
+                  </li>
+                  <li>
+                    <span
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                    >
+                      Office:</span
+                    >
+                    156 Almeria Ave #201, Coral <br />
+                    Gables, FL 33134
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/camilomatarraz"
+                      target="_blank"
+                    >
+                      <img
+                        src="assets/img/icon-linkedin-white.svg"
+                        alt=""
+                        class="w-5 sm:w-6 pt-2 md:pt-0"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-t-1 border-t-gray-400" />
+        <!--cierre footer-->
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between text-gray-400 py-3 tracking-[0.2em] uppercase text-[0.6rem] sm:text-xs md:text-xs gap-y-1 md:gap-y-0"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 400"
+          >
+            <span class="text-center md:text-left"
+              >© 2023 confidence. All rights reserved.</span
+            >
+            <span
+              >MADE WITH <span class="text-red-500"> &#9829;</span> BY DIGITAL
+              FELLOW</span
+            >
+          </div>
+        </div>
+        <!--cierre footer-->
+      </footer>
+    </main>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 8,
+        simulateTouch: true,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      swiper.on("slideChange", function () {
+        var bloqueOculto = document.querySelectorAll(".section-detalle");
+
+        // Ocultar todos los bloques ocultos
+        bloqueOculto.forEach(function (bloque) {
+          bloque.style.display = "none";
+        });
+
+        // Mostrar el bloque correspondiente al índice activo
+        bloqueOculto[swiper.activeIndex % 8].style.display = "block";
+      });
+    </script>
+
+    <script>
+      var swiperMob = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
