@@ -233,7 +233,7 @@
               style="font-family: 'Montserrat', sans-serif; font-weight: 700"
             >
               <!--1-->
-              <div class="swiper-slide" data-id="slide1">
+              <div class="swiper-slide slide-item" data-index="0">
                 <a href="" class="">
                   <div class="">
                     <h1>
@@ -245,7 +245,7 @@
               </div>
 
               <!--2-->
-              <div class="swiper-slide" data-id="slide2">
+              <div class="swiper-slide slide-item" data-index="1">
                 <a href="">
                   <div class="">
                     <h1>
@@ -257,7 +257,7 @@
               </div>
 
               <!--3-->
-              <div class="swiper-slide" data-id="slide3">
+              <div class="swiper-slide slide-item" data-index="2">
                 <a href="">
                   <div class="">
                     <h1>
@@ -269,7 +269,7 @@
               </div>
 
               <!--4-->
-              <div class="swiper-slide" data-id="slide4">
+              <div class="swiper-slide slide-item" data-index="3">
                 <a href="">
                   <div class="">
                     <h1>
@@ -281,7 +281,7 @@
               </div>
 
               <!--5-->
-              <div class="swiper-slide" data-id="slide5">
+              <div class="swiper-slide slide-item" data-index="4">
                 <a href="">
                   <div class="">
                     <h1>
@@ -293,7 +293,7 @@
               </div>
 
               <!--6-->
-              <div class="swiper-slide" data-id="slide6">
+              <div class="swiper-slide slide-item" data-index="5">
                 <a href="">
                   <div class="">
                     <h1>
@@ -305,7 +305,7 @@
               </div>
 
               <!--7-->
-              <div class="swiper-slide" data-id="slide7">
+              <div class="swiper-slide slide-item" data-index="6">
                 <a href="">
                   <div class="">
                     <h1>
@@ -317,7 +317,7 @@
               </div>
 
               <!--8-->
-              <div class="swiper-slide" data-id="slide8">
+              <div class="swiper-slide slide-item" data-index="7">
                 <a href="">
                   <div class="">
                     <h1>
@@ -329,7 +329,7 @@
               </div>
 
               <!--1-->
-              <div class="swiper-slide" data-id="slide1">
+              <div class="swiper-slide slide-item" data-index="0">
                 <a href="">
                   <div class="">
                     <h1>
@@ -341,7 +341,7 @@
               </div>
 
               <!--2-->
-              <div class="swiper-slide" data-id="slide2">
+              <div class="swiper-slide slide-item" data-index="1">
                 <a href="">
                   <div class="">
                     <h1>
@@ -353,7 +353,7 @@
               </div>
 
               <!--3-->
-              <div class="swiper-slide" data-id="slide3">
+              <div class="swiper-slide slide-item" data-index="2">
                 <a href="">
                   <div class="">
                     <h1>
@@ -365,7 +365,7 @@
               </div>
 
               <!--4-->
-              <div class="swiper-slide" data-id="slide4">
+              <div class="swiper-slide slide-item" data-index="3">
                 <a href="">
                   <div class="">
                     <h1>
@@ -377,7 +377,7 @@
               </div>
 
               <!--5-->
-              <div class="swiper-slide" data-id="slide5">
+              <div class="swiper-slide slide-item" data-index="4">
                 <a href="">
                   <div class="">
                     <h1>
@@ -389,7 +389,7 @@
               </div>
 
               <!--6-->
-              <div class="swiper-slide" data-id="slide6">
+              <div class="swiper-slide slide-item" data-index="5">
                 <a href="">
                   <div class="">
                     <h1>
@@ -401,7 +401,7 @@
               </div>
 
               <!--7-->
-              <div class="swiper-slide" data-id="slide7">
+              <div class="swiper-slide slide-item" data-index="6">
                 <a href="">
                   <div class="">
                     <h1>
@@ -413,7 +413,7 @@
               </div>
 
               <!--8-->
-              <div class="swiper-slide" data-id="slide8">
+              <div class="swiper-slide slide-item" data-index="7">
                 <a href="">
                   <div class="">
                     <h1>
@@ -1876,6 +1876,22 @@
 
       <!--CONTACTO-->
       <section class="bg-white py-12 md:py-32 relative">
+        <img
+          src="assets/img/arrow-contacto.svg"
+          alt=""
+          class="hidden md:block absolute z-10 md:top-0 md:left-[-1.3rem] lg:left-[-4.3rem] xl:left-[-1.7rem] h-[32rem] lg:h-[38rem] xl:h-[105%]"
+        />
+        <div
+          class="absolute -right-0 bottom-[-0.05rem] md:-left-1 md:-top-0.5 xl:top-[-0.150rem] h-1/3 sm:h-2/3 md:h-full xl:h-[37.3rem]"
+        >
+          <div class="h-full w-full relative">
+            <img
+              src="assets/img/triangulo-contacto.svg"
+              alt=""
+              class="h-full rotate-[180.3deg] hidden md:block"
+            />
+          </div>
+        </div>
         <div
           class="container mx-auto flex flex-row md:justify-end"
           data-aos="fade-down"
@@ -1884,7 +1900,7 @@
           <div class="flex flex-col gap-y-10">
             <h1
               class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028]"
-              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
             >
               Contacto
             </h1>
@@ -1900,8 +1916,7 @@
                 nos pondremos en contacto con usted.
               </p>
               <a
-                href=""
-                class="text-[#152028] text-lg sm:text-xl lg:text-2xl hover:underline"
+                class="text-[#152028] text-lg sm:text-xl lg:text-2xl cursor-text"
                 style="font-family: 'Montserrat', sans-serif; font-weight: 700"
                 >info@confidencemgt.com</a
               >
@@ -1912,22 +1927,6 @@
             >
               ¡Muchas gracias!
             </p>
-          </div>
-        </div>
-        <img
-          src="assets/img/arrow-contacto.svg"
-          alt=""
-          class="hidden md:block absolute z-10 md:top-0 md:left-[-1.3rem] lg:left-[-4.3rem] xl:left-[-1.7rem] h-[32rem] lg:h-[38rem] xl:h-[105%]"
-        />
-        <div
-          class="absolute -right-0 bottom-[-0.05rem] md:-left-1 md:-top-0.5 xl:top-[-0.150rem] h-1/3 sm:h-2/3 md:h-full xl:h-[37.3rem]"
-        >
-          <div class="h-full w-full relative">
-            <img
-              src="assets/img/triangulo-contacto.svg"
-              alt=""
-              class="h-full rotate-[180.3deg] hidden md:block"
-            />
           </div>
         </div>
       </section>
@@ -2077,31 +2076,6 @@
       AOS.init();
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 8,
-        simulateTouch: true,
-        spaceBetween: 10,
-        loop: true,
-        grabCursor: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      swiper.on("slideChange", function () {
-        var bloqueOculto = document.querySelectorAll(".section-detalle");
-
-        // Ocultar todos los bloques ocultos
-        bloqueOculto.forEach(function (bloque) {
-          bloque.style.display = "none";
-        });
-
-        // Mostrar el bloque correspondiente al índice activo
-        bloqueOculto[swiper.activeIndex % 8].style.display = "block";
-      });
-    </script>
 
     <script>
       var swiperMob = new Swiper(".swiper-container", {

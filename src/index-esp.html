@@ -520,7 +520,8 @@
           >
             <!--1-->
             <a
-              href=""
+              href="servicios.html?slide=1"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -541,7 +542,8 @@
             </a>
             <!--2-->
             <a
-              href=""
+              href="servicios.html?slide=2"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -558,7 +560,8 @@
             </a>
             <!--3-->
             <a
-              href=""
+              href="servicios.html?slide=3"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -579,7 +582,8 @@
             </a>
             <!--4-->
             <a
-              href=""
+              href="servicios.html?slide=4"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -600,7 +604,8 @@
             </a>
             <!--5-->
             <a
-              href=""
+              href="servicios.html?slide=5"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -621,7 +626,8 @@
             </a>
             <!--6-->
             <a
-              href=""
+              href="servicios.html?slide=6"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -642,7 +648,8 @@
             </a>
             <!--7-->
             <a
-              href=""
+              href="servicios.html?slide=7"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -663,7 +670,8 @@
             </a>
             <!--8-->
             <a
-              href=""
+              href="servicios.html?slide=8"
+              onclick="mostrarParametro(event)"
               class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
             >
               <div>
@@ -1029,7 +1037,7 @@
       <!--CLIENTES-->
 
       <!--AFILIADOS-->
-      <section class="py-10 sm:py-16 lg:py-28 bg-[#CA181A]" id="clientes">
+      <section class="py-10 sm:py-16 lg:py-28 bg-[#CA181A]" id="Afiliados">
         <div
           class="container mx-auto flex flex-col gap-y-10 md:gap-y-20"
           data-aos="fade-down"
@@ -1104,8 +1112,7 @@
             </p>
 
             <a
-              href=""
-              class="text-white text-lg sm:text-xl lg:text-2xl hover:underline"
+              class="text-white text-lg sm:text-xl lg:text-2xl cursor-text"
               style="font-family: 'Montserrat', sans-serif; font-weight: 700"
               >info@confidencemgt.com</a
             >
@@ -1172,13 +1179,16 @@
                     <a href="#sobre-nosotros">Sobre nosotros</a>
                   </li>
                   <li class="hover:underline">
-                    <a href="services.html">Servicios</a>
+                    <a href="servicios.html">Servicios</a>
                   </li>
                   <li class="hover:underline">
                     <a href="#casos-exitos">Casos de éxito</a>
                   </li>
                   <li class="hover:underline">
                     <a href="#clientes">Clientes</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="#Afiliados">Afiliados</a>
                   </li>
                   <li class="hover:underline">
                     <a href="#contacto">Contacto</a>
@@ -1203,31 +1213,62 @@
                   "
                 >
                   <li class="hover:underline">
-                    <a href="servicios.html">Inspección del activo</a>
+                    <a
+                      href="servicios.html?slide=1"
+                      onclick="mostrarParametro(event)"
+                      >Inspección del activo</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Análisis de métricas KPIs</a>
+                    <a
+                      href="servicios.html?slide=2"
+                      onclick="mostrarParametro(event)"
+                      >Análisis de métricas KPIs</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Contabilidad y finanzas</a>
+                    <a
+                      href="servicios.html?slide=3"
+                      onclick="mostrarParametro(event)"
+                      >Contabilidad y finanzas</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Gestión bancaria</a>
+                    <a
+                      href="servicios.html?slide=4"
+                      onclick="mostrarParametro(event)"
+                      >Gestión bancaria</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Gestión fiduciaria</a>
+                    <a
+                      href="servicios.html?slide=5"
+                      onclick="mostrarParametro(event)"
+                      >Gestión fiduciaria</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">
+                    <a
+                      href="servicios.html?slide=6"
+                      onclick="mostrarParametro(event)"
+                    >
                       Resguardo de la <br />
                       documentación</a
                     >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Capacitación del personal</a>
+                    <a
+                      href="servicios.html?slide=7"
+                      onclick="mostrarParametro(event)"
+                      >Capacitación del personal</a
+                    >
                   </li>
                   <li class="hover:underline">
-                    <a href="servicios.html">Control de calidad</a>
+                    <a
+                      href="servicios.html?slide=8"
+                      onclick="mostrarParametro(event)"
+                      >Control de calidad</a
+                    >
                   </li>
                 </ul>
               </div>
