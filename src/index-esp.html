@@ -6,6 +6,7 @@
     <meta name="description" content="Basic HTML/Tailwind starter" />
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/img/logo.svg" type="image/x-icon" />
     <!--fuentes-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
@@ -251,7 +252,7 @@
           playsinline
           class="w-full h-[35rem] md:h-screen object-cover brightness-75"
         >
-          <source src="assets/videos/video2.mp4" type="video/mp4" class="" />
+          <source src="assets/videos/video3.mov" type="video/mp4" class="" />
         </video>
         <!-- Header -->
         <header class="w-full absolute top-10 container">
@@ -489,8 +490,8 @@
       </section>
       <!--SOBRE NOSOTROS-->
 
-      <!--SERVICIOS-->
-      <section class="" id="#servicios">
+      <!--SERVICIOS DESK-->
+      <section class="hidden md:block" id="#servicios">
         <div
           class="bg-center bg-no-repeat bg-cover pt-10 pb-32 md:pt-16 md:pb-44 lg:pt-28 lg:pb-72"
           style="background: url(assets/img/bg-servicios.png)"
@@ -707,7 +708,227 @@
           </div>
         </div>
       </section>
-      <!--SERVICIOS-->
+      <!--SERVICIOS DESK-->
+
+      <!--SERVICIOS MOB-->
+      <section class="block md:hidden" id="#servicios">
+        <div
+          class="bg-center bg-no-repeat bg-cover pt-10 pb-32 md:pt-16 md:pb-44 lg:pt-28 lg:pb-72"
+          style="background: url(assets/img/bg-servicios.png)"
+        >
+          <div
+            class="container mx-auto flex justify-start items-start"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h1
+              class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-white"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 700"
+            >
+              Servicios
+            </h1>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#152028] pt-[25.5rem] pb-10 sm:pb-80 md:pb-52 md:pt-[3rem] lg:pt-[6rem] xl:py-52 relative flex justify-center"
+        >
+          <div
+            class="absolute mx-auto grid grid-cols-2 md:grid-cols-4 text-white -top-20 md:-top-36 gap-10 w-10/12 2xl:w-9/12"
+            style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <!--1-->
+            <a
+              href="servicios.html?slide=1"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Inspección <br />
+                  del activo
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/lupa.svg"
+                  alt=""
+                  class="w-7 sm:w-auto md:w-7 lg:w-auto"
+                />
+              </div>
+            </a>
+            <!--2-->
+            <a
+              href="servicios.html?slide=2"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Análisis de <br />
+                  métricas KPIs
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img src="assets/img/kpis.svg" alt="" class="w-7 sm:w-auto" />
+              </div>
+            </a>
+            <!--3-->
+            <a
+              href="servicios.html?slide=3"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Contabilidad <br />
+                  y finanzas
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/bancaria.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--4-->
+            <a
+              href="servicios.html?slide=4"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Gestión <br />
+                  bancaria
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/finanzas.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--5-->
+            <a
+              href="servicios.html?slide=5"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Gestión <br />
+                  fiduciaria
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/gestion.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--6-->
+            <a
+              href="servicios.html?slide=6"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Resguardo de <br class="block" />
+                  documentación
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/bandera.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--7-->
+            <a
+              href="servicios.html?slide=7"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Capacitación <br />
+                  del personal
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/capacitacion.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+            <!--8-->
+            <a
+              href="servicios.html?slide=8"
+              onclick="mostrarParametro(event)"
+              class="bg-[#2064ae] hover:bg-blue-500 px-2 py-2 sm:px-5 sm:py-5 md:px-2 md:py-2 flex flex-col justify-around lg:justify-start gap-y-4 sm:gap-y-14 hover:translate-y-[-10px] md:hover:translate-y-[-20px] transition ease-in-out duration-500"
+            >
+              <div>
+                <h1
+                  class="text-[0.65rem] sm:text-xl md:text-sm lg:text-xl xl:text-2xl"
+                >
+                  Control de <br />
+                  calidad
+                </h1>
+              </div>
+              <div class="flex justify-end">
+                <img
+                  src="assets/img/calidad.svg"
+                  alt=""
+                  class="w-7 sm:w-auto"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#152028] pb-20 pt-0 sm:pt-28 md:pt-0">
+          <div
+            class="container mx-auto flex justify-center items-center text-white"
+          >
+            <a
+              href="servicios.html"
+              class="flex bg-[#2064ae] items-center justify-center gap-x-5 px-5 py-2 text-sm sm:text-xl uppercase hover:bg-blue-500 transition ease-in-out duration-500"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+            >
+              <img src="assets/img/arrow.png" alt="" class="w-4 h-4" />
+              <span>Ver más</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--SERVICIOS MOB-->
 
       <!--CASOS DE EXITO-->
       <section id="casos-exitos" class="bg-[#25B4B1] py-10 lg:py-32">
@@ -722,7 +943,7 @@
           >
             Casos de éxito
           </h1>
-          <div class="swiper-container">
+          <div class="swiper-container-casos">
             <div class="swiper-wrapper flex items-center">
               <div class="swiper-slide">
                 <div
@@ -1205,7 +1426,8 @@
               >
                 Servicios
               </h1>
-              <div>
+              <!--desk-->
+              <div class="hidden md:block">
                 <ul
                   class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
                   style="
@@ -1273,6 +1495,51 @@
                   </li>
                 </ul>
               </div>
+              <!--desk-->
+
+              <!--mob-->
+              <div class="block md:hidden">
+                <ul
+                  class="flex flex-col gap-y-1 text-xs sm:text-sm lg:text-lg text-white"
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                  "
+                >
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=1">Inspección del activo</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=2"
+                      >Análisis de métricas KPIs</a
+                    >
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=3">Contabilidad y finanzas</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=4">Gestión bancaria</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=5">Gestión fiduciaria</a>
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=6">
+                      Resguardo de la <br />
+                      documentación</a
+                    >
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=7"
+                      >Capacitación del personal</a
+                    >
+                  </li>
+                  <li class="hover:underline">
+                    <a href="servicios.html?slide=8">Control de calidad</a>
+                  </li>
+                </ul>
+              </div>
+              <!--mob-->
             </div>
 
             <div class="flex flex-col gap-y-1 md:gap-y-5">
@@ -1356,28 +1623,6 @@
       AOS.init();
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 1.2,
-        centeredSlides: true,
-        initialSlide: 1,
-        spaceBetween: 15,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          400: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1.5,
-            spaceBetween: 100, // Mostrar 3 imágenes a la vez a partir de 768px
-          },
-        },
-      });
-    </script>
     <script src="js/index.js"></script>
   </body>
 </html>
