@@ -16,6 +16,10 @@
     <meta property="og:image" content="https://i.ibb.co/PcTkhK9/portada.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/img/logo.svg" type="image/x-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
     <!--fuentes-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800;900&display=swap");
@@ -285,32 +289,214 @@
             <a class="" href="index.html">
               <img src="assets/img/logo.jpg" alt="logo" class="w-8 md:w-11" />
             </a>
-            <div class="flex justify-center items-center gap-x-4 text-white">
-              <span class="flex justify-center items-center gap-x-1"
-                ><a href="index.html" class="text-[#152028] font-extrabold">
-                  EN</a
+            <div
+              class="flex justify-center items-center gap-x-4 md:gap-x-5 text-white"
+            >
+              <div
+                data-modal-target="staticModal"
+                data-modal-toggle="staticModal"
+                style="font-family: 'Montserrat', sans-serif; font-weight: 500"
+              >
+                <button
+                  class="bg-[#152028] hover:bg-[#2064ae] p-1 md:p-1.5 transition-all ease-in-out duration-300 uppercase text-[0.6rem] md:text-sm"
                 >
-                <span> |</span> <a href="esp.html"> ES</a></span
-              ><img
-                src="assets/img/menu-hamburguesa.svg"
-                class="w-8 cursor-pointer"
-                id="menu-hambur"
-                alt="menu"
-              />
+                  <span>Book a meeting</span>
+                </button>
+              </div>
+              <div class="flex justify-center items-center gap-x-4 text-white">
+                <span class="flex justify-center items-center gap-x-1"
+                  ><a href="index.html" class="text-[#152028] font-extrabold">
+                    EN</a
+                  >
+                  <span> |</span> <a href="esp.html"> ES</a></span
+                ><img
+                  src="assets/img/menu-hamburguesa.svg"
+                  class="w-8 cursor-pointer"
+                  id="menu-hambur"
+                  alt="menu"
+                />
+              </div>
             </div>
           </div>
         </header>
+
+        <!--POP-UP FORMULARIO START-->
+        <div
+          id="staticModal"
+          data-modal-backdrop="static"
+          tabindex="-1"
+          aria-hidden="true"
+          class="fixed hidden top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <div class="relative w-full max-w-3xl max-h-full">
+            <div class="relative bg-[#152028] rounded-lg shadow">
+              <!--TITULAR + CLOSE-->
+              <div
+                class="flex items-start justify-between p-3 md:p-6 rounded-t"
+              >
+                <div>
+                  <h3
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 500;
+                    "
+                    class="text-base md:text-xl text-white"
+                  >
+                    Book a meeting
+                  </h3>
+                  <p
+                    style="
+                      font-family: 'Montserrat', sans-serif;
+                      font-weight: 300;
+                    "
+                    class="text-white text-xs md:text-base"
+                  >
+                    Complete your information in the following form to booking a
+                    meeting. <br />
+                    Thank you very much.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                  data-modal-hide="staticModal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!--TITULAR + CLOSE-->
+
+              <div class="space-y-6">
+                <form class="rounded-lg p-3 md:p-6">
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      for="full_name"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Name and Surname:</label
+                    >
+                    <input
+                      type="text"
+                      id="full_name"
+                      name="full_name"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      for="company"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Company:</label
+                    >
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      for="email"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      for="phone"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Phone:</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      for="inquiry_reason"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Reason for Inquiry:</label
+                    >
+                    <textarea
+                      id="inquiry_reason"
+                      name="inquiry_reason"
+                      rows="4"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="flex items-center justify-center">
+                    <button
+                      type="submit"
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
+                      class="hover:bg-transparent text-sm md:text-base uppercase bg-[#2064ae] border-2 transition ease-in-out duration-300 border-[#2064ae] text-white font-bold py-1 px-8 rounded"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--POP-UP FORMULARIO END-->
 
         <!--Titular-->
         <div
           class="absolute text-white flex flex-col gap-y-5 text-center justify-center items-center"
         >
-          <img
-            src="assets/img/titular.svg"
-            alt="hero"
-            class="w-3/4 md:w-full hidden"
-          />
-          <div>
+          <div class="">
             <h1
               class="text-4xl sm:text-7xl lg:text-[6.5rem] leading-none"
               style="font-family: 'Montserrat', sans-serif; font-weight: 800"
@@ -1650,5 +1836,6 @@
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>
 </html>

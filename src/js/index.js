@@ -143,11 +143,25 @@ function mostrarBloqueActivo() {
   bloqueOculto[swiperDesk.activeIndex % 8].style.display = "block";
 }
 
-// Llama a la función para mostrar/ocultar los bloques después de la redirección
-mostrarBloqueActivo();
+function verificarYMostrarBloqueActivo() {
+  // Obtenemos la URL actual
+  var urlActual = window.location.pathname;
+
+  // Verificamos si nos encontramos en services.html o services.html
+  if (
+    urlActual.includes("services.html") ||
+    urlActual.includes("services.html")
+  ) {
+    // Ejecutamos la función para mostrar/ocultar los bloques
+    mostrarBloqueActivo();
+  }
+}
+
+// Llama a la función para verificar y mostrar/ocultar los bloques después de la redirección
+verificarYMostrarBloqueActivo();
 
 swiperDesk.on("slideChange", function () {
-  mostrarBloqueActivo();
+  verificarYMostrarBloqueActivo();
 });
 
 //SWIPER SERVICIOS + FUNCIONAMIENTO CON HOME END//
