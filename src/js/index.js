@@ -150,7 +150,7 @@ function verificarYMostrarBloqueActivo() {
   // Verificamos si nos encontramos en services.html o services.html
   if (
     urlActual.includes("services.html") ||
-    urlActual.includes("services.html")
+    urlActual.includes("servicios.html")
   ) {
     // Ejecutamos la función para mostrar/ocultar los bloques
     mostrarBloqueActivo();
