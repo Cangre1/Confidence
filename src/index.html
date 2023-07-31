@@ -296,7 +296,7 @@
                 data-modal-target="staticModal"
                 data-modal-toggle="staticModal"
                 style="font-family: 'Montserrat', sans-serif; font-weight: 500"
-                class="hidden"
+                class=""
               >
                 <button
                   class="bg-[#152028] hover:bg-[#2064ae] p-1 md:p-1.5 transition-all ease-in-out duration-300 uppercase text-[0.6rem] md:text-sm"
@@ -352,9 +352,8 @@
                     "
                     class="text-white text-xs md:text-base"
                   >
-                    Complete your information in the following form to booking a
-                    meeting. <br />
-                    Thank you very much.
+                    Please complete the following fields so we can get in touch
+                    and schedule a meeting as soon as possible.
                   </p>
                 </div>
                 <button
@@ -384,23 +383,43 @@
 
               <div class="space-y-6">
                 <form class="rounded-lg p-3 md:p-6">
-                  <div class="mb-2">
-                    <label
-                      style="
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 500;
-                      "
-                      for="full_name"
-                      class="block text-white text-xs md:text-sm font-bold mb-2"
-                      >Name and Surname:</label
-                    >
-                    <input
-                      type="text"
-                      id="full_name"
-                      name="full_name"
-                      class="w-full px-3 py-2 rounded-md"
-                      required
-                    />
+                  <div class="flex w-full gap-x-10">
+                    <div class="mb-2 w-full">
+                      <label
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        for="full_name"
+                        class="block text-white text-xs md:text-sm font-bold mb-2"
+                        >First Name:</label
+                      >
+                      <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        class="w-full px-3 py-2 rounded-md"
+                        required
+                      />
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label
+                        style="
+                          font-family: 'Montserrat', sans-serif;
+                          font-weight: 500;
+                        "
+                        for="full_name"
+                        class="block text-white text-xs md:text-sm font-bold mb-2"
+                        >Last Name:</label
+                      >
+                      <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        class="w-full px-3 py-2 rounded-md"
+                        required
+                      />
+                    </div>
                   </div>
                   <div class="mb-2">
                     <label
@@ -417,25 +436,6 @@
                       id="company"
                       name="company"
                       class="w-full px-3 py-2 rounded-md"
-                      required
-                    />
-                  </div>
-                  <div class="mb-2">
-                    <label
-                      style="
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 500;
-                      "
-                      for="email"
-                      class="block text-white text-xs md:text-sm font-bold mb-2"
-                      >Email:</label
-                    >
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="w-full px-3 py-2 rounded-md"
-                      required
                     />
                   </div>
                   <div class="mb-2">
@@ -446,7 +446,7 @@
                       "
                       for="phone"
                       class="block text-white text-xs md:text-sm font-bold mb-2"
-                      >Phone:</label
+                      >Phone number:</label
                     >
                     <input
                       type="tel"
@@ -462,16 +462,33 @@
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 500;
                       "
+                      for="email"
+                      class="block text-white text-xs md:text-sm font-bold mb-2"
+                      >Email address:</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full px-3 py-2 rounded-md"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label
+                      style="
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                      "
                       for="inquiry_reason"
                       class="block text-white text-xs md:text-sm font-bold mb-2"
-                      >Reason for Inquiry:</label
+                      >Questions/comments:</label
                     >
                     <textarea
                       id="inquiry_reason"
                       name="inquiry_reason"
                       rows="4"
                       class="w-full px-3 py-2 rounded-md"
-                      required
                     ></textarea>
                   </div>
                   <div class="flex items-center justify-center">
