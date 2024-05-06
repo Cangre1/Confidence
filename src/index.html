@@ -23,6 +23,28 @@
     <!--fuentes-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800;900&display=swap");
+
+      .padding-about {
+        padding: 3.5rem 0px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .padding-about {
+          padding: 2.5rem 0px;
+        }
+      }
+
+      @media only screen and (min-width: 1280px) {
+        .padding-about {
+          padding: 11rem 0px;
+        }
+      }
+
+      @media only screen and (min-width: 1536px) {
+        .padding-about {
+          padding: 13.4rem 0px;
+        }
+      }
     </style>
     <!--LIBRERIA AOS-->
     <link
@@ -592,10 +614,7 @@
       <!--INTRODUCCION-->
 
       <!--SOBRE NOSOTROS-->
-      <section
-        id="sobre-nosotros"
-        class="bg-white py-14 md:py-10 lg:py-10 xl:pb-20 xl:pt-40 2xl:py-20 relative"
-      >
+      <section id="sobre-nosotros" class="padding-about relative">
         <img
           src="assets/img/Flecha_.png"
           alt="arrow"
@@ -682,7 +701,7 @@
                 starting a business in the United States.
               </p>
             </div>
-            <div class="w-1/2">
+            <div class="w-1/2 hidden">
               <img
                 src="assets/img/camilo.jpg"
                 alt="owner"

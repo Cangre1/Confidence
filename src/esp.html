@@ -168,6 +168,28 @@
           left: auto;
         }
       }
+
+      .padding-about {
+        padding: 3.5rem 0px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .padding-about {
+          padding: 2.5rem 0px;
+        }
+      }
+
+      @media only screen and (min-width: 1280px) {
+        .padding-about {
+          padding: 7.5rem 0px;
+        }
+      }
+
+      @media only screen and (min-width: 1536px) {
+        .padding-about {
+          padding: 10.2rem 0px;
+        }
+      }
     </style>
   </head>
 
@@ -763,10 +785,7 @@
       <!--INTRODUCCION-->
 
       <!--SOBRE NOSOTROS-->
-      <section
-        id="sobre-nosotros"
-        class="bg-white py-14 md:py-10 lg:py-10 xl:pb-20 xl:pt-40 2xl:py-20 relative"
-      >
+      <section id="sobre-nosotros" class="bg-white padding-about relative">
         <img
           src="assets/img/Flecha_.png"
           alt="ilustracion-flecha"
@@ -790,7 +809,7 @@
               class="text-2xl sm:text-3xl lg:text-5xl xl:text-[4rem] xl:leading-[4.5rem] text-[#152028] md:text-white"
               style="font-family: 'Montserrat', sans-serif; font-weight: 700"
             >
-              Acerca <br />de
+              Acerca <br class="hidden lg:block" />de
             </h1>
           </div>
           <div class="w-1/2 text-xl flex flex-col gap-y-10"></div>
@@ -876,7 +895,7 @@
                 inclusive.
               </p>
             </div>
-            <div class="w-1/2">
+            <div class="w-1/2 hidden">
               <img
                 src="assets/img/camilo.jpg"
                 alt="dueño"
